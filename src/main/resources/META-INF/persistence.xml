@@ -1,0 +1,29 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+            http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="techblog">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/technicalblog" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="myself" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect" />
+            <property name="hibernate.temp.use_jdbc_metada_defaults" value=""/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- creates a table if there's none, updates if there's already one -->
+            <property name="hibernate.show_sql" value="true"/> <!-- shows SQL in the console -->
+            <property name="hibernate.format_sql" value="true"/> <!-- formats the sql while showing -->
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
